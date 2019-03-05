@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<meta charset="utf-8">
+	<!--Sets width to whatever device is being used-->
+	<meta name="viewport" content="width=device-width">
+	<title>Contact Us</title>
+	<link rel="stylesheet" href="css/stylesheet.css">
+	</head>
+
+<body>
+	<header>
+	<div class="container">
+		<div id="branding">
+			<h1>Adhar Project</h1>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="events.html">Events</a></li>
+				<li class="current"><a href="contactus.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	</div>
+	</header>
+	
+	<section id="contactusimg">
+		<div class="container">
+		
+		</div>
+	</section>
+	
+	<section id="newsletter">
+	<div class="container">
+	<h1>Subscribe To Our Newsletter</h1>
+		<form>
+		<input type="email" placeholder="Enter Email...">
+		<button type="submit" class="button_1">Subscribe</button>
+		</form>
+	</div>
+	</section>
+	
+<section id="main">
+		<div class="container">
+		<h1>You Can Find Us Here</h1>
+		<div id="AdharLoc" style="width:100%;height:400px;"></div>
+		
+		<script>
+		function myMap() {
+		var myLatLng = {lat: 52.629299, lng: -1.110530};
+		
+		var map = new
+		google.maps.Map(document.getElementById('AdharLoc'), {
+		zoom: 18,
+		center: myLatLng
+		});
+		
+		var infowindow = new google.maps.InfoWindow({
+			content: "79 St Peters Road, Leicester, LE2 1DH"
+		});
+		
+		var marker = new google.maps.Marker({
+		position: myLatLng,
+		map: map,
+		title: 'Come and Say Hello!'
+		});
+		
+		infowindow.open(map, marker);
+		
+		}
+		</script>
+		
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRu73usg9XQefmYlQgUHb0RIxHjpe5I9s&callback=myMap">
+		</script>
+		
+		<p class="contactinfobox">
+		<b>Opening Hours:</b><br>
+		Monday To Friday - 9AM to 5PM<br>
+		Saturday & Sunday - Closed<br>
+		<br>
+		<b>Contact Information:</b><br>
+		0116 220 0070, 0116 220 0074<br>
+		admin@adharproject.org<br></p>
+		</div>
+</section>
+	
+<footer>
+<img src="img/adharlogo3x.png" id="adharlogo">
+<p>Adhar Project, Copyright &copy; 2019</p>
+</footer>
+	
+</body>
+</html>
+	
