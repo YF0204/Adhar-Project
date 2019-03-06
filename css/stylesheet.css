@@ -118,6 +118,29 @@ header a:hover {
 	background-size: cover;
 }
 
+#showcaseinfo {
+	background: url('../img/lightbulb.jpg') no-repeat;
+	min-height: 590px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#FourFacts {
+	width: 300px; 
+	height: 250px;
+}
+
+#Benefits { 
+	height: 400px;
+}
+
+#MoreFacts {
+	width: 300px; 
+	height: 250px;
+}
+
 .contactinfobox {
 	text-align: center;
 	padding: 15px;
@@ -227,6 +250,11 @@ article#mhvideo {
 	width: 350px;
 }
 
+#PDF {
+	height: 300px;
+	width: 350px;
+}
+
 /* Events Page */
 
 ul#events li {
@@ -302,6 +330,11 @@ header {
 	width: 100%;
 	margin-bottom: 5px;
 	}
+	
+#PDF {
+	height: 200px;
+	width: 200px;
+}
 }
 
 
