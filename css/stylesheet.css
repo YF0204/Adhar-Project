@@ -7,7 +7,7 @@ body {
 	background-color: #F4F4F4;
 }
 
-.container {
+.content {
 	width: 80%;
 	margin: auto;
 	overflow: hidden;
@@ -18,6 +18,20 @@ ul {
 	padding: 0;
 }
 
+.groupList {
+	padding: 15px;
+	background: white;
+	color: black;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.groupList li {
+	list-style: circle;
+	margin-left: 5px;
+}
+
+
 .button_1 {
 	height: 38px;
 	background: #E8491D;
@@ -27,7 +41,7 @@ ul {
 	color: white;
 }
 
-.sidecolumnstyle {
+.bgstyle {
 	padding: 15px;
 	background: white;
 	color: black;
@@ -57,11 +71,11 @@ header li {
 	padding: 0 20px 0 20px;
 }
 
-header #branding {
+header #navigation {
 	float: left;
 }
 
-header #branding h1 {
+header #navigation h1 {
 	margin: 0;
 	font-size: 40px;
 }
@@ -82,7 +96,7 @@ header a:hover {
 	font-weight: bold;
 }
 
-#showcase {
+#landingPage {
 	background: url('../img/support.jpeg') no-repeat;
 	min-height: 600px;
 	-webkit-background-size: cover;
@@ -91,7 +105,7 @@ header a:hover {
 	background-size: cover;
 }
 
-#showcaseabout {
+#landingPageabout {
 	background: url('../img/Team.jpg') no-repeat;
 	min-height: 600px;
 	-webkit-background-size: cover;
@@ -100,7 +114,7 @@ header a:hover {
 	background-size: cover;
 }
 
-#showcaseevents {
+#landingPageevents {
 	background: url('../img/vitalhelp.jpg') no-repeat;
 	min-height: 600px;
 	-webkit-background-size: cover;
@@ -109,7 +123,7 @@ header a:hover {
 	background-size: cover;
 }
 
-#contactusimg {
+#landingPagecontact {
 	background: url('../img/contactuskeys.jpg') no-repeat;
 	min-height: 600px;
 	-webkit-background-size: cover;
@@ -118,7 +132,7 @@ header a:hover {
 	background-size: cover;
 }
 
-#showcaseinfo {
+#landingPageinfo {
 	background: url('../img/lightbulb.jpg') no-repeat;
 	min-height: 590px;
 	-webkit-background-size: cover;
@@ -150,13 +164,13 @@ header a:hover {
 	margin-bottom: 10px;
 }
 
-#showcase h1 {
+#landingPage h1 {
 	margin-top: 100px;
 	font-size: 55px;
 	margin-bottom: 10px;
 }
 
-#showcase p {
+#landingPage p {
 	font-size: 20px;
 }
 
@@ -169,7 +183,7 @@ iframe {
 	font-size: 36px;
 }
 
-#newsletter {
+#newsletterTab {
 	padding: 15px;
 	color: #FFFFFF;
 	background: lightpink;
@@ -177,16 +191,16 @@ iframe {
 	border-bottom: #FFFFFF 3px solid;
 }
 
-#newsletter h1 {
+#newsletterTab h1 {
 	float: left;
 }
 
-#newsletter form {
+#newsletterTab form {
 	float: right;
 	margin-top:15px;
 }
 
-#newsletter input[type="email"]{
+#newsletterTab input[type="email"]{
 	padding: 4px;
 	height: 25px;
 	width: 250px;
@@ -194,18 +208,18 @@ iframe {
 
 /* Row of Boxes */
 
-#boxes {
+#boxrow {
 	margin-top: 20px;
 }
 
-#boxes .box {
-	float: right;
+#boxrow .box {
+	float: left;
 	width: 30%;
 	padding: 20px;
 	text-align: center;
 }
 
-#boxes h1 {
+#boxrow h1 {
 	font-size: 36px;
 }
 
@@ -299,10 +313,55 @@ footer {
 	text-align: center;
 }
 
+#stage {
+    margin: 1em auto;
+    width: 360px;
+    height: 270px;
+    border: 10px solid #fff;
+    overflow: hidden;
+  }
+
+#stage a {
+    position: relative;
+    display: inline-block;
+}
+
+#stage a::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    content: attr(title);
+    font-weight: bold;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 2px 2px 0 #333;
+  }
+
+  #stage a:nth-of-type(2) {
+    left: 360px;
+    top: -50%;
+    animation-name: slider;
+    animation-delay: 4s;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0,1.5,0.5,1);
+  }
+  
+  #stage a:nth-of-type(n+3) {
+    display: none;
+  }
+
+  @keyframes slider {
+    from { transform: translateY(-50%) rotate(30deg); left: 360px; }
+    to   { transform: translateY(-50%); left: 0px; }
+  }
+
 /* Media Queries to keep website responsive on all devices */
 @media (max-width: 768px){
-	header #branding, header nav, header nav li,
-	#newsletter h1, #newsletter form, #boxes .box, 
+	header #navigation, header nav, header nav li,
+	#newsletterTab h1, #newsletterTab form, #boxrow .box, 
 	article#maincolumn, aside#sidecolumn, aside#sidecolumn1, iframe{
 		float: none;
 		text-align: center;
@@ -313,20 +372,20 @@ header {
 	padding-bottom: 20px;
 }
 
-#showcase {
+#landingPage {
 	min-height: 400px;
 }
 
-#showcase h1 {
+#landingPage h1 {
 	margin-top: 40px;
 }
 
-#newsletter button {
+#newsletterTab button {
 	display: block;
 	width: 100%;
 }
 
-#newsletter form input[type="email"] {
+#newsletterTab form input[type="email"] {
 	width: 100%;
 	margin-bottom: 5px;
 	}
@@ -335,6 +394,16 @@ header {
 	height: 200px;
 	width: 200px;
 }
+
+#stage a img {
+	height: 300px;
+	width: 330px;
+}
+
+#stage {
+	border: none;
+}
+
 }
 
 
