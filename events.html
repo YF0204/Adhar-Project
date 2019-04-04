@@ -106,12 +106,42 @@
 			<p class="bgstyle"><b>NOTE:</b> These events are subject to availability, please make sure to book places by calling us for sessions with limited places. 
 			Thank you and we hope to see you soon.</p>
 		</div>
+		<div class="content">
+		<h1 class="page-title">Adhar's Weekly Events</h1>
+		<p class="bgstyle">These are the type of events we have on offer weekly, please be sure to check the table above,
+		regularly of upcoming sessions, please call us if you require more information.</p>
+			<div id="stage">
+			<a title="Keep Your Stress Levels Low with Yoga"><img src="slides/yoga.jpg" width="360" height="270"></a>
+			<a title="Regain Focus and Balance with Tai Chi"><img src="slides/taiChi.jpg" width="360" height="270"></a>
+			<a title="Learn and Make Something Fun with Arts & Crafts"><img src="slides/artsCrafts.jpg" width="360" height="270"></a>
+			<a title="Visit our support groups for a nice, calming chat"><img src="slides/supportGroup.jpg" width="360" height="270"></a>
+			<a title="Not sure about using tech? We have workshop tutorials to show you"><img src="slides/tablet.jpg" width="360" height="270"></a>
+		</div>
+		<p class="bgstyle">Most of our events usually take place at our Head Office, however some may take place in another location.
+		This will be clearly stated in the table above.</p>
+		</div>
 </section>
 	
 <footer>
 <img src="img/adharlogo3x.png" id="adharlogo">
 <p>Adhar Project, Copyright &copy; 2019</p>
 </footer>
+
+<script type="text/javascript">
+
+// Original JavaScript code by Chirp Internet: www.chirp.com.au
+// Please acknowledge use of this code by including this header.
+
+window.addEventListener("DOMContentLoaded", function(e) {
+
+var stage = document.getElementById("stage");
+var slideComplete = function(e) { stage.appendChild(arr[0]); };
+var arr = stage.getElementsByTagName("a");
+for(var i = 0; i < arr.length; i++) {
+	arr[i].addEventListener("animationend", slideComplete, false);
+}}, false);
+
+</script>
 	
 </body>
 </html>	
